@@ -26,16 +26,22 @@ const renderApp = () => {
 
 ReactDOM.render(<LoadingPage/>, document.getElementById('app'));
 
-firebase.auth().onAuthStateChanged((user) => {
-    if (user) {
-        store.dispatch(login(user.uid));
-        renderApp();
-        if (history.location.pathname === '/') {
-            history.push('/dashboard');
-        }
-    } else {
-        store.dispatch(logout());
-        renderApp();
-        history.push('/');
-    }
-});
+renderApp();
+//history.push('/home')
+
+// firebase.auth().onAuthStateChanged((user) => {
+//     if (user) {
+//         console.log(user.email);
+//         if(user.email === 'aarondabs@gmail.com'){
+//             store.dispatch(login(user.uid));
+//             renderApp();
+//             if (history.location.pathname === '/') {
+//                 history.push('/dashboard');
+//             }
+//         }
+//     } else {
+//         store.dispatch(logout());
+//         renderApp();
+//         history.push('/');
+//     }
+// });
