@@ -32,7 +32,6 @@ firebase.auth().onAuthStateChanged((user) => {
     if (user) {
         console.log(user.email);
         if(user.email === 'aarondabs@gmail.com'){
-            console.log('Dispatchin!');
             store.dispatch(login(user.email));
             renderApp();
             if (history.location.pathname === '/login') {

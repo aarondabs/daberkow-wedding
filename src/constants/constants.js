@@ -7,7 +7,11 @@ export const ceremonyVenue = {
         state: 'CO',
         'zip': '12345'
     },
-    time: '3:00'
+    time: '3:00',
+    center: {
+        lat: 39.630356,
+        lng: -106.054619
+    }
 }
 
 export const receptionVenue = {
@@ -19,5 +23,9 @@ export const receptionVenue = {
         state: 'CO',
         'zip': '12345'
     },
-    time: '5:00'
+    time: '5:00',
+    center: {
+        lat: 39.575907,
+        lng: -106.098536
+    }
 }

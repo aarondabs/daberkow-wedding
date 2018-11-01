@@ -9,6 +9,9 @@
     }
 }
 
-.google-map {
-    overflow: hidden;
+.map-wrapper { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: $l-size;
 }
