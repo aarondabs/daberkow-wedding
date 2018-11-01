@@ -2,18 +2,16 @@ import React from 'react';
 import { connect } from 'react-redux';
 import  { Route, Redirect } from 'react-router-dom';
 
-export const PrivateRoute = ({ 
+export const LoginRoute = ({ 
     isAuthenticated, 
     component: Component,
     ...rest
 }) => (
     <Route {...rest} component={(props) => (
         isAuthenticated ? (
-            <div>
-                <Component {...props} />
-            </div>
+            <Redirect to="/admin" />
         ) : (
-            <Redirect to="/login" />
+            <Component {...props} />
         )
     )} />
 );
@@ -22,4 +20,4 @@ const mapStateToProps = (state) => ({
     isAuthenticated: !!state.auth.email
 });
 
-export default connect(mapStateToProps)(PrivateRoute);
+export default connect(mapStateToProps)(LoginRoute);
