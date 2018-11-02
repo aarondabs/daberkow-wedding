@@ -7,11 +7,11 @@ const EventInfoPage = () => (
     <div>
         <VenueInfo venue={ceremonyVenue}/>
         <div className="map-wrapper">
-            <GoogleMap center={ceremonyVenue.center}  />
+            <GoogleMap venue={ceremonyVenue}  />
         </div>
         <VenueInfo venue={receptionVenue}/>
         <div className="map-wrapper">
-            <GoogleMap center={receptionVenue.center}  />
+            <GoogleMap venue={receptionVenue}  />
         </div>
     </div>
 );
