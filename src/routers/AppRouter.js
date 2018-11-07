@@ -8,9 +8,10 @@ import EventInfoPage from '../components/EventInfoPage';
 import RSVPPage from '../components/RSVPPage';
 import RegistryPage from '../components/RegistryPage';
 import NotFoundPage from '../components/NotFoundPage';
+import AddGuestPage from '../components/AddGuestPage';
 import PublicRoute from './PublicRoute';
 import PrivateRoute from './PrivateRoute';
-import LoginRoute from './LoginRoute';
+import LoginRoute from  './LoginRoute';
 
 export const history = createHistory();
 
@@ -23,8 +24,9 @@ const AppRouter = () => (
                 <PublicRoute path="/info" component={EventInfoPage} />
                 <PublicRoute path="/rsvp" component={RSVPPage} />
                 <PublicRoute path="/registry" component={RegistryPage} />
-                <PrivateRoute path="/admin" component={AdminPage} />
-                <Route path="/login" component={LoginPage} />
+                <PrivateRoute path="/admin" component={AdminPage} exact={true} />
+                <PrivateRoute path="/admin/add" component={AddGuestPage} />
+                <LoginRoute path="/login" component={LoginPage} />
                 <Route component={NotFoundPage} />
             </Switch>
         </div>
