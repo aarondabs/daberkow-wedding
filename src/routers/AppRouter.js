@@ -9,6 +9,7 @@ import RSVPPage from '../components/RSVPPage';
 import RegistryPage from '../components/RegistryPage';
 import NotFoundPage from '../components/NotFoundPage';
 import AddGuestPage from '../components/AddGuestPage';
+import EditGuestPage from '../components/EditGuestPage';
 import PublicRoute from './PublicRoute';
 import PrivateRoute from './PrivateRoute';
 import LoginRoute from  './LoginRoute';
@@ -26,6 +27,7 @@ const AppRouter = () => (
                 <PublicRoute path="/registry" component={RegistryPage} />
                 <PrivateRoute path="/admin" component={AdminPage} exact={true} />
                 <PrivateRoute path="/admin/add" component={AddGuestPage} />
+                <PrivateRoute path="/admin/edit/:id" component={EditGuestPage} />
                 <LoginRoute path="/login" component={LoginPage} />
                 <Route component={NotFoundPage} />
             </Switch>

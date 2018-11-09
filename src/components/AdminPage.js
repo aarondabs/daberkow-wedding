@@ -2,12 +2,13 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { startLogout } from '../actions/auth';
 import { history } from '../routers/AppRouter';
+import GuestList from './GuestList';
+import GuestsSummary from './GuestsSummary';
 
 const AdminPage = ({ startLogout }) => (
     <div>
-        Admin stuff here
-        <button onClick={startLogout}>Logout</button>
-        <button onClick={goToAdd}>Add</button>
+        <GuestsSummary />
+        <GuestList />
     </div>
 );
 const goToAdd = () => {

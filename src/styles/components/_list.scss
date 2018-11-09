@@ -61,3 +61,11 @@
         padding-left: $s-size;
     }
 }
+
+.list-item__data--negative {
+    color: red;
+}
+
+.list-item__data--positive {
+    color: rgb(21, 201, 21);
+}

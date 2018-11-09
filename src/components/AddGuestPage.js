@@ -1,23 +1,26 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import GuestForm from './GuestForm';
 import { startAddGuest } from '../actions/guests';
 
 export class AddGuestPage extends React.Component {
-    onClick = () => {
-        const guest = {
-            firstName: 'Aaron',
-                lastName: 'Daberkow',
-                partyName: 'Daberkows',
-                hasPlusOne: true,
-                plusOneName: 'Hannah Alexander'
-        }
+    onSubmit = (guest) => {
         this.props.startAddGuest(guest);
-        // this.props.history.push('/');
+        this.props.history.push('/admin');
     };
     render() {
         return (
             <div>
-            <button onClick={this.onClick}>Test Add Guest</button>
+                <div className="page-header">
+                    <div className="content-container">
+                        <h1 className="page-header__title">Add Guest</h1>
+                    </div>
+                </div>
+                <div className="content-container">
+                    <GuestForm 
+                        onSubmit={this.onSubmit}
+                    />
+                </div>
             </div>
         );
     }
