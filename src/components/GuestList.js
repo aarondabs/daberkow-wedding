@@ -28,6 +28,7 @@ export const GuestList = (props) => (
 
 const mapStateToProps = (state) => {
     return {
+        //TODO add filtering
         // expenses: selectExpenses(state.expenses, state.filters)
         guests: state.guests
     };

@@ -29,12 +29,8 @@ const renderApp = () => {
 
 ReactDOM.render(<LoadingPage/>, document.getElementById('app'));
 
-// renderApp();
-//store.dispatch(startSetGuests()).then(() => {
-
 firebase.auth().onAuthStateChanged((user) => {
     if (user) {
-        console.log(user.email);
         if(user.email === 'aarondabs@gmail.com'){
             store.dispatch(login(user.email));
             renderApp();

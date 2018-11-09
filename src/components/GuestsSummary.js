@@ -18,6 +18,7 @@ export const GuestsSummary = ({ guestCount, attendingNumber }) => {
 };
 
 const mapStateToProps = (state) => {
+    //TODO add filtering
     const visibleGuests = state.guests;
     return {
         guestCount: visibleGuests.length,

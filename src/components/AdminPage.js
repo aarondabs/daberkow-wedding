@@ -11,9 +11,6 @@ const AdminPage = ({ startLogout }) => (
         <GuestList />
     </div>
 );
-const goToAdd = () => {
-    history.push('/admin/add');
-}
 
 const mapDispatchToProps = (dispatch) => ({
     startLogout: () => dispatch(startLogout()),
