@@ -1,9 +1,13 @@
 .input-group {
+    align-items: center;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    margin-top: $m-size;
     margin-bottom: $m-size;
     @media (min-width: $desktop-breakpoint) {
         flex-direction: row;
+        margin-top: $l-size;
         margin-bottom: $l-size;
     }
 }
@@ -13,4 +17,8 @@
     @media (min-width: $desktop-breakpoint) {
         margin: 0 $s-size 0 0;
     }
+}
+
+.input-group__item__title {
+    margin: 0
 }

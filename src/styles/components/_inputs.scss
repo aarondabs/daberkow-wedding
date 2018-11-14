@@ -8,6 +8,8 @@
 
 .select {
     @extend .text-input;
+    text-align: center;
+    text-align-last: center;
 }
 
 .textarea {
