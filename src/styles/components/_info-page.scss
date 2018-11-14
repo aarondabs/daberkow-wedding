@@ -7,3 +7,13 @@
     font-style: italic;
     font-weight: 200;
 }
+
+.page-info {
+    margin-top: $l-size;
+    margin-bottom: $l-size;
+    font-weight: 300;
+    text-align: center;
+    span {
+        font-weight: bold;
+    }
+}

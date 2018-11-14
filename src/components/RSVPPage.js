@@ -26,7 +26,7 @@ export class RSVPPage extends React.Component {
     };
     goBack = () => {
         if(this.state.guestNumber === 1){
-            this.setState(() => ({ partyGuests: [] }));
+            this.setState(() => ({ partyGuests: [], error: '' }));
         } else {
             this.setState((prevState) => ({ guestNumber: prevState.guestNumber - 1 }));
         }
@@ -37,7 +37,7 @@ export class RSVPPage extends React.Component {
                 {
                     this.state.partyGuests.length === 0 ? (
                         <div>
-                            <p>Find your reservation by typing your first and last name as they appear on your mailed RSVP</p>
+                            <p className="page-info">Find your reservation by typing your first and last name as they appear on your mailed RSVP</p>
                             {this.state.error && <p className="form__error">{this.state.error}</p>}
                             <GuestSearchForm 
                                 onSubmit={this.onSearchSubmit}
@@ -46,11 +46,11 @@ export class RSVPPage extends React.Component {
                     ) : (
                         this.state.guestNumber > this.state.partyGuests.length ? (
                             <div>
-                                <h3 className="page-header__title">Success! Thanks for submitting your RSVP!</h3>
+                                <h3 className="page-info">Success! Thanks for submitting your RSVP!</h3>
                             </div>
                         ) : (
                             <div>
-                                <h3 className="page-header__title">Guest <span>{this.state.guestNumber}</span> of <span>{this.state.partyGuests.length}</span></h3>
+                                <h3 className="page-info">Guest <span>{this.state.guestNumber}</span> of <span>{this.state.partyGuests.length}</span></h3>
                                 <GuestRSVPForm
                                     key={this.state.partyGuests[this.state.guestNumber - 1].id}
                                     guest={this.state.partyGuests[this.state.guestNumber - 1]}

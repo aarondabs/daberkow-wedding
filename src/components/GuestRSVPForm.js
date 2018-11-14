@@ -13,7 +13,12 @@ export default class GuestRSVPForm extends React.Component {
 
     onAttendingChange = (e) => {
         const attending = e.target.value;
-        this.setState(() => ({ attending }));
+        if(attending === 'true'){
+            this.setState(() => ({ attending: true }));
+        } else if(attending === 'false'){
+            this.setState(() => ({ attending: false }));
+        }
+        
     };
 
     onFirstNameChange = (e) => {
@@ -60,6 +65,16 @@ export default class GuestRSVPForm extends React.Component {
                             <button className="button">Submit</button>
                         </div>
                     </div>
+                    {
+                        //TODO fix add plus one button submitting form
+                        ((this.state.attending === true) && this.props.guest.hasPlusOne) ? (
+                            <div className="input-group">
+                                <button className="button">Add Plus One</button>
+                            </div>
+                        ) : (
+                            <div></div>
+                        )
+                    }
                 </form>
         );
     }
