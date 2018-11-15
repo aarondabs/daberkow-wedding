@@ -7,23 +7,24 @@ export default class GuestRSVPForm extends React.Component {
         this.state = {
             attending: undefined,
             plusOneName: '',
+            showPlusOne: false,
             error: ''
         };
-    }
+    };
 
     onAttendingChange = (e) => {
         const attending = e.target.value;
         if(attending === 'true'){
             this.setState(() => ({ attending: true }));
         } else if(attending === 'false'){
-            this.setState(() => ({ attending: false }));
+            this.setState(() => ({ attending: false, showPlusOne: false, plusOneName: '' }));
         }
         
     };
 
-    onFirstNameChange = (e) => {
-        const firstName = e.target.value;
-        this.setState(() => ({ firstName }));
+    onPlusOneNameChange = (e) => {
+        const plusOneName = e.target.value;
+        this.setState(() => ({ plusOneName }));
     };
     
     onSubmit = (e) => {
@@ -31,6 +32,8 @@ export default class GuestRSVPForm extends React.Component {
 
         if (this.state.attending === undefined) {
             this.setState(() => ({ error: 'Please select if you will be in attendance.' }));
+        } else if(this.state.attending === true && this.state.showPlusOne === true && !this.state.plusOneName.trim()){
+            this.setState(() => ({ error: 'Please enter a plus one name.' }));
         } else {
             this.setState(() => ({ error: '' }));
             this.props.onSubmit({
@@ -41,6 +44,15 @@ export default class GuestRSVPForm extends React.Component {
             });
         }
     };
+
+    showPlusOne = () => {
+        this.setState(() => ({ showPlusOne: true }));
+    };
+
+    hidePlusOne = () => {
+        this.setState(() => ({ showPlusOne: false, plusOneName: '' }));
+    }
+
     render() {
         return (
                 <form className="form" onSubmit={this.onSubmit}>
@@ -66,11 +78,39 @@ export default class GuestRSVPForm extends React.Component {
                         </div>
                     </div>
                     {
-                        //TODO fix add plus one button submitting form
                         ((this.state.attending === true) && this.props.guest.hasPlusOne) ? (
-                            <div className="input-group">
-                                <button className="button">Add Plus One</button>
+                            this.state.showPlusOne === true ? (
+                                <div className="input-group input-group--bordered">
+                                    <div className="input-group__item">
+                                        <input 
+                                            type="text"
+                                            placeholder="Plus One Full Name"
+                                            className="text-input"
+                                            value={this.state.plusOneName}
+                                            onChange={this.onPlusOneNameChange}
+                                        />
+                                    </div>
+                                    <div className="input-group__item">
+                                        <button 
+                                            className="button"
+                                            onClick={this.hidePlusOne}
+                                            type="button"
+                                        >
+                                            Remove Plus One
+                                        </button>
+                                    </div>
+                                </div>
+                            ) : (
+                                <div className="input-group">
+                                <button 
+                                    className="button"
+                                    onClick={this.showPlusOne}
+                                    type="button"
+                                >
+                                    Add Plus One
+                                </button>
                             </div>
+                            )
                         ) : (
                             <div></div>
                         )

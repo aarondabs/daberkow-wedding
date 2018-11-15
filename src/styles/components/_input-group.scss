@@ -12,6 +12,11 @@
     }
 }
 
+.input-group--bordered {
+    border: 1px solid darken($off-white, 7%);
+    padding: $m-size;
+}
+
 .input-group__item {
     margin-bottom: $s-size;
     @media (min-width: $desktop-breakpoint) {

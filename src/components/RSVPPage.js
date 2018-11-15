@@ -12,7 +12,7 @@ export class RSVPPage extends React.Component {
             guestNumber: 1,
             error: ''
         };
-    }
+    };
     onSearchSubmit = (name) => {
         const partyGuests = selectGuestsInParty(name, this.props.guests);
         this.setState(() => ({ partyGuests }));
@@ -30,7 +30,8 @@ export class RSVPPage extends React.Component {
         } else {
             this.setState((prevState) => ({ guestNumber: prevState.guestNumber - 1 }));
         }
-    }
+    };
+
     render() {
         return (
             <div className="content-container">
