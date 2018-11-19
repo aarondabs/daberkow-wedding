@@ -8,6 +8,10 @@
     justify-content: space-between;
     padding: $s-size 0;
 }
+.header__content--title {
+    justify-content: center;
+    padding: 0;
+}
 
 .header__tab {
     color: white;
@@ -18,6 +22,11 @@
     color: white;
     text-decoration: none;
     h1 {
-        margin: 0;
+        font-family: 'Lobster Two', cursive;
+        font-size: 4rem; 
+        font-weight: normal; 
+        //line-height: 48px; 
+        margin: 0; 
+        text-align: center; 
     }
 }

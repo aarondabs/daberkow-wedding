@@ -6,6 +6,11 @@ import { startLogout } from '../actions/auth';
 export const Header = ({ startLogout }) => (
     <header className="header">
         <div className="content-container">
+            <div className="header__content header__content--title">
+                <Link className="header__title" to="/">
+                    <h1>Daberkow Wedding</h1>
+                </Link>
+            </div>
             <div className="header__content">
                 <Link className="header__tab" to="/home">
                     Home
