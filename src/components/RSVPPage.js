@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import GuestSearchForm from './GuestSearchForm';
 import GuestRSVPForm from './GuestRSVPForm';
 import selectGuestsInParty from '../selectors/guest-party';
+import { startEditGuest } from '../actions/guests';
 
 export class RSVPPage extends React.Component {
     constructor(props) {
@@ -20,8 +21,8 @@ export class RSVPPage extends React.Component {
             this.setState(() => ({ error: 'Guest not found. Please enter the name as it appears on the invite.' }));
         }
     };
-    onRSVPSubmit = (guest) => {
-        //TODO push guest to firebase
+    onRSVPSubmit = (updates) => {
+        this.props.startEditGuest(this.state.partyGuests[this.state.guestNumber - 1].id, updates);
         this.setState((prevState) => ({ guestNumber: prevState.guestNumber + 1 }));
     };
     goBack = () => {
@@ -73,4 +74,8 @@ const mapStateToProps = (state) => {
     };
 };
 
-export default connect(mapStateToProps)(RSVPPage);
+const mapDispatchToProps = (dispatch) => ({
+    startEditGuest: (id, guest) => dispatch(startEditGuest(id, guest)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(RSVPPage);

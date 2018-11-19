@@ -38,7 +38,7 @@ const mapStateToProps = (state, props) => {
     };
 };
 
-const mapDispatchToProps = (dispatch, props) => ({
+const mapDispatchToProps = (dispatch) => ({
     startEditGuest: (id, guest) => dispatch(startEditGuest(id, guest)),
     startRemoveGuest: (data) => dispatch(startRemoveGuest(data))
 });

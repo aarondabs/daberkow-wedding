@@ -37,7 +37,7 @@ export default class GuestRSVPForm extends React.Component {
         } else {
             this.setState(() => ({ error: '' }));
             this.props.onSubmit({
-                ...this.props.guest,
+                // ...this.props.guest,
                 attending: this.state.attending,
                 plusOneName: this.state.plusOneName,
                 hasReplied: true
