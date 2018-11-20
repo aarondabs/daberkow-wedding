@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import GuestListItem from './GuestListItem';
-// import selectExpenses from '../selectors/expenses';
+import selectGuests from '../selectors/guests';
 
 export const GuestList = (props) => (
     <div className="content-container">
@@ -28,9 +28,7 @@ export const GuestList = (props) => (
 
 const mapStateToProps = (state) => {
     return {
-        //TODO add filtering
-        // expenses: selectExpenses(state.expenses, state.filters)
-        guests: state.guests
+        guests: selectGuests(state.guests, state.filters)
     };
 };
 

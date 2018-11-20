@@ -26,7 +26,11 @@ export default class GuestForm extends React.Component {
     };
     onHasPlusOneChange = (e) => {
         const hasPlusOne = e.target.value;
-        this.setState(() => ({ hasPlusOne }));
+        if(hasPlusOne === 'true'){
+            this.setState(() => ({ hasPlusOne: true }));
+        } else if(hasPlusOne === 'false'){
+            this.setState(() => ({ hasPlusOne: false }));
+        }
     };
     
     onSubmit = (e) => {
