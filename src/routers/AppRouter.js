@@ -21,10 +21,10 @@ const AppRouter = () => (
         <div>
             <Switch>
                 <Route exact path="/" render={() => ( <Redirect to="/home" /> )} />
-                <PublicRoute path="/home" component={HomePage} />
-                <PublicRoute path="/info" component={EventInfoPage} />
-                <PublicRoute path="/rsvp" component={RSVPPage} />
-                <PublicRoute path="/registry" component={RegistryPage} />
+                <PublicRoute path="/home" navName="home" component={HomePage} />
+                <PublicRoute path="/info" navName="info" component={EventInfoPage} />
+                <PublicRoute path="/rsvp" navName="rsvp" component={RSVPPage} />
+                <PublicRoute path="/registry" navName="registry" component={RegistryPage} />
                 <PrivateRoute path="/admin" component={AdminPage} exact={true} />
                 <PrivateRoute path="/admin/add" component={AddGuestPage} />
                 <PrivateRoute path="/admin/edit/:id" component={EditGuestPage} />

@@ -5,10 +5,11 @@ import Header from '../components/Header';
 
 export const PublicRoute = ({  
     component: Component,
+    navName,
     ...rest
 }) => (
     <Route {...rest} component={(props) => (
-        <div>
+        <div className={navName}>
             <Header />
             <Component {...props} />
         </div>
