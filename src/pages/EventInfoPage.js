@@ -1,7 +1,7 @@
 import React from 'react';
-import VenueInfo from './VenueInfo';
+import VenueInfo from '../components/VenueInfo';
 import { ceremonyVenue, receptionVenue } from '../constants/constants';
-import GoogleMap from './GoogleMap';
+import GoogleMap from '../components/GoogleMap';
 
 const EventInfoPage = () => (
     <div>

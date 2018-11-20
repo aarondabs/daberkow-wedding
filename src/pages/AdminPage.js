@@ -1,9 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { startLogout } from '../actions/auth';
-import GuestList from './GuestList';
-import GuestsSummary from './GuestsSummary';
-import GuestListFilters from './GuestListFilters';
+import GuestList from '../components/GuestList';
+import GuestsSummary from '../components/GuestsSummary';
+import GuestListFilters from '../components/GuestListFilters';
 
 const AdminPage = ({ startLogout }) => (
     <div>

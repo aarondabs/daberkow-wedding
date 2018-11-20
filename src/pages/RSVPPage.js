@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import GuestSearchForm from './GuestSearchForm';
-import GuestRSVPForm from './GuestRSVPForm';
+import GuestSearchForm from '../components/GuestSearchForm';
+import GuestRSVPForm from '../components/GuestRSVPForm';
 import selectGuestsInParty from '../selectors/guest-party';
 import { startEditGuest } from '../actions/guests';
 

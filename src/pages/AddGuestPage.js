@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import GuestForm from './GuestForm';
+import GuestForm from '../components/GuestForm';
 import { startAddGuest } from '../actions/guests';
 
 export class AddGuestPage extends React.Component {
