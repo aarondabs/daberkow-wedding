@@ -1,6 +1,5 @@
 .nav ul {
     list-style: none;
-    //background-color: $dark-blue;
     text-align: center;
     padding: 0;
     margin: 0;
@@ -22,14 +21,14 @@
 }
    
 .nav a:hover {
-    background-color: #005f5f;
+    background-color: $green;
 }
 
 div.home a.homeNav,
 div.info a.infoNav,
 div.rsvp a.rsvpNav,
 div.registry a.registryNav {
-    background-color: #447399a9;
+    background-color: $light-blue;
     color: black;
     cursor: default;
 }
