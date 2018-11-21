@@ -9,7 +9,7 @@ export const PublicRoute = ({
     ...rest
 }) => (
     <Route {...rest} component={(props) => (
-        <div className={navName}>
+        <div className={navName + ' public-page'}>
             <Header />
             <Component {...props} />
         </div>

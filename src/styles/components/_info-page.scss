@@ -17,3 +17,11 @@
         font-weight: bold;
     }
 }
+
+.page-info-container {
+    background: fade-out(white, .4);
+    // border: 1px solid $grey;
+    border-radius: 0 0 4px 4px;
+    padding: $m-size 6rem;
+    text-align: center;
+}

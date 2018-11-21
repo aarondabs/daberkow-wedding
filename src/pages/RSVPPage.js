@@ -36,6 +36,7 @@ export class RSVPPage extends React.Component {
     render() {
         return (
             <div className="content-container">
+                <div className="page-info-container">
                 {
                     this.state.partyGuests.length === 0 ? (
                         <div>
@@ -63,6 +64,7 @@ export class RSVPPage extends React.Component {
                         )
                     )
                 }
+                </div>
             </div>
         );
     }
