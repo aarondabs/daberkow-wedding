@@ -1,31 +1,31 @@
 export const ceremonyVenue = {
     title: 'Ceremony',
-    name: 'The Spot',
+    name: 'Our Lady of Peace Catholic Church',
     address: {
-        street: '123 North Maple St',
+        street: '89 Smith Ranch Rd',
         city: 'Silverthorne',
         state: 'CO',
-        'zip': '12345'
+        'zip': '80498'
     },
-    time: '3:00',
+    time: '5:00',
     center: {
-        lat: 39.630356,
-        lng: -106.054619
+        lat: 39.648497,
+        lng: -106.080887
     }
 }
 
 export const receptionVenue = {
     title: 'Reception',
-    name: 'Dope Reception Location',
+    name: 'Warren Station',
     address: {
-        street: '420 West Blaze Ave',
-        city: 'Silverthorne',
+        street: '164 Ida Belle Dr',
+        city: 'Keystone',
         state: 'CO',
-        'zip': '12345'
+        'zip': '80435'
     },
-    time: '5:00',
+    time: '6:00',
     center: {
-        lat: 39.575907,
-        lng: -106.098536
+        lat: 39.607160,
+        lng: -105.941818
     }
 }
