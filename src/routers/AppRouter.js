@@ -29,7 +29,7 @@ const AppRouter = () => (
                 <PrivateRoute path="/admin/add" component={AddGuestPage} />
                 <PrivateRoute path="/admin/edit/:id" component={EditGuestPage} />
                 <LoginRoute path="/login" component={LoginPage} />
-                <Route component={NotFoundPage} />
+                <Route render={() => ( <Redirect to="/home" /> )} />
             </Switch>
         </div>
     </Router>
