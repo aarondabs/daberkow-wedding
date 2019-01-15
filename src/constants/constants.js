@@ -29,3 +29,28 @@ export const receptionVenue = {
         lng: -105.941818
     }
 }
+
+export const homeInfo = {
+    story:      `It all started in the romantic Health and Fitness Center at Union Pacific. Aaron would come in 
+                every day around lunch time to work out while I was working. I thought he was cute, pretty
+                much the first day I saw him (mustache and all). I would attempt - and usually fail miserably, to
+                flirt with Aaron for FOUR months before getting to hang out with him outside of the gym. We
+                finally hung out for the first time and hit it off immediately. We ended up ditching our friends to
+                hang out with each other the rest of the day. Aaron then asked me out on our first date and we
+                were inseparable the rest of the summer! After an amazing summer together, I moved to Texas
+                to pursue my masters degree in Public Health. Distance was definitely not easy, but we made
+                the most of it. Aaron was so supportive throughout my two years in school and I couldn’t have
+                asked for anyone better to help me through it. We would meet in Oklahoma City (the halfway
+                point between Omaha and College Station) multiple times throughout the two years. We would
+                each drive 7 hours just to see each other for less than 48 hours, it was not ideal but it only
+                made our relationship stronger! After I graduated, I moved back to Omaha and the rest is
+                history!`,
+                
+    proposal:   `As most people know, Aaron is a planner, so the proposal was nothing short of that. Aaron
+                started looking for rings back in August and when I was in Texas for a weekend in September,
+                he drove to Topeka, KS to take my parents out to dinner and ask them for permission. (soo
+                cute) FINALLY, on Friday December 14, Aaron proposed!! We had a date night already planned
+                and before going to dinner we played with our pups in the backyard. While we were in the
+                backyard, Aaron pulled out the ring and popped the question! It was absolutely perfect! We
+                cannot wait for September 6, 2019 and hope you all can join us!`
+}
