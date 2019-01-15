@@ -79,7 +79,7 @@ export default class GuestRSVPForm extends React.Component {
                     {
                         ((this.state.attending === true) && this.props.guest.hasPlusOne) ? (
                             this.state.showPlusOne === true ? (
-                                <div className="input-group input-group--bordered">
+                                <div className="input-group">
                                     <div className="input-group__item">
                                         <input 
                                             type="text"
