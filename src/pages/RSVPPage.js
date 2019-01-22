@@ -49,7 +49,7 @@ export class RSVPPage extends React.Component {
                     ) : (
                         this.state.guestNumber > this.state.partyGuests.length ? (
                             <div>
-                                <h3 className="page-info">Success! Thanks for submitting your RSVP!</h3>
+                                <h3 className="page-info">Thanks for submitting your RSVP!</h3>
                             </div>
                         ) : (
                             <div>

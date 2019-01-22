@@ -3,19 +3,26 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-top: $m-size;
-    margin-bottom: $m-size;
+    margin-top: $s-size;
+    margin-bottom: $s-size;
     @media (min-width: $desktop-breakpoint) {
+        justify-content: center;
         flex-direction: row;
-        margin-top: $l-size;
-        margin-bottom: $l-size;
+        margin-top: $m-size;
+        margin-bottom: $m-size;
     }
 }
 
 .input-group__item {
     margin-bottom: $s-size;
+    input {
+        width: 100%;
+    }
     @media (min-width: $desktop-breakpoint) {
-        margin: 0 $s-size 0 0;
+        margin: 0 $m-size 0 $m-size;
+        input {
+            width: 350px;
+        }
     }
 }
 

@@ -21,6 +21,23 @@
 .page-info-container {
     background: fade-out(white, .4);
     border-radius: 0 0 4px 4px;
-    padding: $m-size 6rem;
+    padding: $m-size 2rem;
     text-align: center;
+    @media (min-width: $desktop-breakpoint) {
+        padding: $m-size 6rem;
+    }
+}
+
+.page-image-link {
+    align-items: center;
+    display: inline-block;
+    padding-top: $l-size;
+    width: 80%;
+    a img {
+        border-radius: 15px;
+        box-shadow: -3px -3px 1px rgb(153, 149, 149);
+        -webkit-box-shadow: -3px -3px 1px rgb(153, 149, 149);
+        -moz-box-shadow: -3px -3px 1px rgb(153, 149, 149);
+        width: 100%;
+    }
 }

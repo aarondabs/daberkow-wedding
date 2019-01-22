@@ -31,20 +31,20 @@ export const receptionVenue = {
 }
 
 export const homeInfo = {
-    story:      `It all started in the romantic Health and Fitness Center at Union Pacific. Aaron would come in 
-                every day around lunch time to work out while I was working. I thought he was cute, pretty
-                much the first day I saw him (mustache and all). I would attempt - and usually fail miserably, to
-                flirt with Aaron for FOUR months before getting to hang out with him outside of the gym. We
-                finally hung out for the first time and hit it off immediately. We ended up ditching our friends to
-                hang out with each other the rest of the day. Aaron then asked me out on our first date and we
-                were inseparable the rest of the summer! After an amazing summer together, I moved to Texas
-                to pursue my masters degree in Public Health. Distance was definitely not easy, but we made
-                the most of it. Aaron was so supportive throughout my two years in school and I couldn’t have
-                asked for anyone better to help me through it. We would meet in Oklahoma City (the halfway
-                point between Omaha and College Station) multiple times throughout the two years. We would
-                each drive 7 hours just to see each other for less than 48 hours, it was not ideal but it only
-                made our relationship stronger! After I graduated, I moved back to Omaha and the rest is
-                history!`,
+    story:      `It all started in the romantic Health and Fitness Center at Union Pacific. Aaron would come
+                 in every day around lunch time to work out while I was working. I thought he was cute, pretty
+                 much the first day I saw him (mustache and all). For FOUR months, I would attempt - and 
+                 usually fail miserably, to flirt with Aaron before getting to see him outside the gym. We 
+                 finally hung out for the first time outside of work with mutual friends and hit it off 
+                 immediately. We ended up ditching our friends pretty quickly to spend the rest of the day 
+                 together. Aaron then asked me out on our first date and we were inseparable the rest of the 
+                 summer! After an amazing summer together, I moved to Texas to pursue my masters degree in Public 
+                 Health. Distance was definitely not easy, but we made the most of it. Aaron was so supportive 
+                 throughout my two years in school and I couldn’t have asked for anyone better to help me through 
+                 it. We would meet in Oklahoma City (the halfway point between Omaha and College Station) multiple 
+                 times throughout the two years. We would each drive 7 hours just to see each other for less than 
+                 48 hours. It was not ideal but it only made our relationship stronger!  After I graduated, I moved 
+                 back to Omaha and the rest is history!`,
                 
     proposal:   `As most people know, Aaron is a planner, so the proposal was nothing short of that. Aaron
                 started looking for rings back in August and when I was in Texas for a weekend in September,
