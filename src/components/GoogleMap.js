@@ -5,7 +5,7 @@ export default class GoogleMap extends React.Component {
     renderMarkers(map, maps) {
         const title = `${this.props.venue.title}\n${this.props.venue.name}`;
         const infoWindow = new maps.InfoWindow({
-            content: `${this.props.venue.name}`
+            content: `<a href="${this.props.venue.link}">${this.props.venue.name}</a>`
         });
         const marker = new maps.Marker({
             position: {

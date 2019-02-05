@@ -1,3 +1,5 @@
+export const crateAndBarrelLink = 'https://www.crateandbarrel.com/gift-registry/hannah-alexander-and-aaron-daberkow/r5938740'
+
 export const ceremonyVenue = {
     title: 'Ceremony',
     name: 'Our Lady of Peace Catholic Church',
@@ -7,11 +9,12 @@ export const ceremonyVenue = {
         state: 'CO',
         'zip': '80498'
     },
-    time: '5:00PM',
+    time: '5:30PM',
     center: {
         lat: 39.648497,
         lng: -106.080887
-    }
+    },
+    link: 'https://goo.gl/maps/AjpgX3iZVUQ2'
 }
 
 export const receptionVenue = {
@@ -27,7 +30,24 @@ export const receptionVenue = {
     center: {
         lat: 39.607160,
         lng: -105.941818
-    }
+    },
+    link: 'https://goo.gl/maps/8DnqzdgJmfo'
+}
+
+export const hotelVenue = {
+    title: 'Lodging',
+    name: 'River Run Village',
+    address: {
+        street: '100 Decrum Square',
+        city: 'Keystone',
+        state: 'CO',
+        'zip': '80435'
+    },
+    center: {
+        lat: 39.607669,
+        lng: -105.943449
+    },
+    link: 'https://goo.gl/maps/eJmQfwyeymS2'
 }
 
 export const homeInfo = {
